@@ -4,13 +4,13 @@
   "private": true,  
   "homepage": "https://ruslang4.github.io/PortfolioWebsite",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "dev": "next dev -H 0.0.0.0 --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d out",
+  "dev": "next dev -H 0.0.0.0 --turbopack",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+},
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.3",
     "@radix-ui/react-dialog": "^1.1.6",
