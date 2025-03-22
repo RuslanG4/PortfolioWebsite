@@ -2,6 +2,8 @@
 const nextConfig = {
   /* config options here */
   output: 'export',
+  basePath: "/PortfolioWebsite/game-dev-portfolio",
+  assetPrefix: "/PortfolioWebsite/game-dev-portfolio", 
   trailingSlash: true,
   images: {
     unoptimized: true,
