@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Game-themed color palette */
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 250 95% 76%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 195 80% 65%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 12 90% 55%;
+    --accent-foreground: 0 0% 98%;
+
+    --gaming-green: 120 100% 50%;
+    --gaming-blue: 195 100% 50%;
+    --gaming-red: 0 100% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+/* Smooth scrolling and better defaults */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom animation classes */
+@layer utilities {
+  .glow {
+    text-shadow: 0 0 5px currentColor, 0 0 20px currentColor;
+  }
+
+  .game-card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .game-card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(var(--primary), 0.5);
+  }
+}

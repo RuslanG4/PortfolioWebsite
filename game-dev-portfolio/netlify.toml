@@ -1,0 +1,26 @@
+[build]
+  command = "bun run build"
+  publish = ".next"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_VERSION = "18"
+
+# Handle SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Enable Bun for builds
+[functions]
+  node_bundler = "esbuild"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[images]
+  remote_images = [
+    "https://images-rsg.storage.googleapis.com/.*",
+    "https://ext.same-assets.com/.*"
+  ]
